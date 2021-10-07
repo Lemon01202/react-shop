@@ -1,0 +1,46 @@
+.currentProductCard{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.currentImage img{
+	width: 400px;
+	height: 500px;
+}
+
+.productTitle h1{
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	font-size: 32px;
+}
+
+.productDescription{
+	color: grey;
+	margin-bottom: 30px;
+}
+
+.productRating, .purchaseButton{
+	font-size: 18px;
+}
+
+.purchaseButton{
+	width: 85%;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+.productRating{
+	margin-left: 15px;
+}
+
+.purchaseBlock{
+	display: flex;
+	border: 1px solid black;
+	border-radius: 30px 0px 0px 30px;
+	overflow: hidden;
+}
