@@ -3,14 +3,42 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { setProducts } from '../../redux/actions/productAction'
+import { setPriceRange } from '../../redux/actions/sidebarAction'
 
 const ProductCard = () => {
 	const { product } = useSelector(state => state.products)
 	const dispatch = useDispatch();
+
+
 	const fetchingProducts = async () => {
 		try {
+			const findMaxMin = (array, params) => {
+				let value = array[0];
+				if (params === 'min') {
+					for (let i = 0; i < array.length; i++) {
+						if (array[i] < value) {
+							value = array[i];
+						}
+					}
+				}
+				else if (params === 'max') {
+					for (let i = 0; i < array.length; i++) {
+						if (array[i] > value) {
+							value = array[i];
+						}
+					}
+				}
+				else {
+					return console.log(`Element with current params ${params} not found`);
+				}
+				return value;
+			}
 			const response = await axios.get('https://fakestoreapi.com/products');
+			const prices = [];
+			response.data.map(p => prices.push(p.price))
+			console.log(prices);
 			dispatch(setProducts(response.data));
+			dispatch(setPriceRange([findMaxMin(prices, 'min'), findMaxMin(prices, 'max')]))
 		}
 		catch {
 			console.log('Error');

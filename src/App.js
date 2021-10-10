@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header.js/Header';
-import ProductComponent from './components/Products/ProductComponent';
 import ProductDetail from './components/Products/ProductDetail';
 import ProductsListing from './components/Products/ProductsListing';
+import Sidebar from './components/Sidebar/Sidebar';
 
 const App = () => {
   return (

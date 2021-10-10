@@ -1,6 +1,7 @@
 .productList{
 	display: flex;
 	justify-content: center;
+
 }
 
 .productCardImage img{
@@ -13,8 +14,8 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	text-align: center;
-	
-
+	position: relative;
+	left: 150px;
 }
 
 .productCard{
@@ -68,28 +69,13 @@ section.row{
   border-radius: 3px;
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0.42) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(28%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.42))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* IE10+ */
+	
 	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#6b000000',GradientType=0 ); /* IE6-8 */
-
-	-webkit-transition: background-color 0.3s ease-in-out;
-	   -moz-transition: background-color 0.3s ease-in-out;
-	    -ms-transition: background-color 0.3s ease-in-out;
-	     -o-transition: background-color 0.3s ease-in-out;
-	        transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
 }
 .item:hover .item-overlay{
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0.42) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(28%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.42))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0.42) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#6b000000',GradientType=0 ); /* IE6-8 */
 	background-color: rgba(0,0,0,0.4);
@@ -98,31 +84,13 @@ section.row{
 	position: absolute;
 	width:100%;
 	bottom: 0;
-	-webkit-transform: translate(0,100%);
-	   -moz-transform: translate(0,100%);
-	    -ms-transform: translate(0,100%);
-	     -o-transform: translate(0,100%);
-	        transform: translate(0,100%);
-	
-	-webkit-transition: all 0.3s ease-in-out;
-	   -moz-transition: all 0.3s ease-in-out;
-	    -ms-transition: all 0.3s ease-in-out;
-	     -o-transition: all 0.3s ease-in-out;
-	        transition: all 0.3s ease-in-out;
+	transform: translate(0,100%);
+	transition: all 0.3s ease-in-out;
 	
 }
 .item:hover .item-content{
-	-webkit-transform: translate(0,0);
-	   -moz-transform: translate(0,0);
-	    -ms-transform: translate(0,0);
-	     -o-transform: translate(0,0);
-	        transform: translate(0,0);
-	    
-	-webkit-transition: all 0.3s ease-in-out;
-	   -moz-transition: all 0.3s ease-in-out;
-	    -ms-transition: all 0.3s ease-in-out;
-	     -o-transition: all 0.3s ease-in-out;
-	        transition: all 0.3s ease-in-out;
+	transform: translate(0,0);
+	transition: all 0.3s ease-in-out;
 }
 
 .item-top-content{
@@ -138,11 +106,7 @@ section.row{
 .item-add-content{
 	padding:0 15px 15px 15px;
 	opacity:0;
-	-webkit-transition: all 0.3s ease-in-out;
-	   -moz-transition: all 0.3s ease-in-out;
-	    -ms-transition: all 0.3s ease-in-out;
-	     -o-transition: all 0.3s ease-in-out;
-	        transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .item:hover .item-add-content{
 	opacity:1
@@ -153,43 +117,6 @@ section.row{
 	padding-top:10px;
 }
 
-
-
-/* Buttons */
-/* .item-button{
-	border-radius:3px;
-	width:30px;
-	height:30px;
-}
-.item-button.play{
-	background-color:#40c781;
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	opacity:0;
-	background-image: url(http://webstudios.dk/resources/img/play-img.png);
-}
-.item-button.play:hover{
-	background-color:#34a46c;
-	}
-.container-item:hover .item-button.play{
-	opacity:1;
-}
-
-.item-button.share{
-	background-color:#4f4f4f;
-	position: absolute;
-	top: 50px;
-	left: 15px;
-	opacity:0;
-	background-image: url(http://webstudios.dk/resources/img/share-img.png);
-}
-.item-button.share:hover{
-	background-color:#333333;
-	}
-.container-item:hover .item-button.share{
-	opacity:1;
-} */
 .btn.buy{
 	background-color: #40c781;
 	text-align:center;
@@ -201,11 +128,7 @@ section.row{
 	opacity:1;
 	border:0px solid #35a76e;
 	border-bottom-width:2px;
-	-webkit-transition: all 0.2s ease-in-out;
-	   -moz-transition: all 0.2s ease-in-out;
-	    -ms-transition: all 0.2s ease-in-out;
-	     -o-transition: all 0.2s ease-in-out;
-	        transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 .btn.buy:hover{
 	background-color:#34a46c;

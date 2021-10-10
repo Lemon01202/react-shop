@@ -1,0 +1,32 @@
+.headerLogo{
+	width: 200px;
+	padding: 20px;
+}
+
+.header{
+	background-color: #EFEFEF;
+	display: flex;
+}
+
+.headerTitle{
+	/* display: grid; */
+	/* grid-template-rows: 1fr 1fr; */
+	/* font-size: 20px; */
+	margin: 30px 10px 0 0;
+}
+
+.shopName{
+	font-size: 22px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #EE3226;
+}
+
+.shopNameSubtitle{
+	font-size: 16px;
+	color: #6ba01f;
+}
+
+.leftSide{
+	display: flex;
+}
