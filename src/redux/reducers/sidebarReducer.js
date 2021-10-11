@@ -18,14 +18,24 @@ const sidebarReducer = (state = initialState, action) => {
 				...state,
 				categories: action.payload
 			}
+		case SidebarTypes.SET_MAX_PRICE:
+			// debugger;
+			return {
+				...state,
+				staticMaxPrice: action.payload
+			}
+		case SidebarTypes.SET_MIN_PRICE:
+			return {
+				...state,
+				staticMinPrice: action.payload,
+			}
 		case SidebarTypes.SET_PRICE_RANGE:
 			return {
 				...state,
 				priceRange: action.payload,
-				staticMinPrice: action.payload[0],
-				staticMaxPrice: action.payload[1],
 
 			}
+
 		default:
 			return state;
 	}

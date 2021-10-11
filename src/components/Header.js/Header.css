@@ -1,32 +1,49 @@
-.headerLogo{
-	width: 200px;
-	padding: 20px;
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{height: 900px;}
+header {
+	background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-image: url('https://manometcurrent.com/wp-content/uploads/2021/05/Paper-Bags-Market.jpg');
+  background-size: cover;
+}
+.overlay h3{
+text-transform: uppercase;
+}
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin-bottom: 30px;
 }
 
-.header{
-	background-color: #EFEFEF;
-	display: flex;
+h3, p {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
 }
 
-.headerTitle{
-	/* display: grid; */
-	/* grid-template-rows: 1fr 1fr; */
-	/* font-size: 20px; */
-	margin: 30px 10px 0 0;
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
 }
-
-.shopName{
-	font-size: 22px;
-	font-weight: 600;
-	text-transform: uppercase;
-	color: #EE3226;
-}
-
-.shopNameSubtitle{
-	font-size: 16px;
-	color: #6ba01f;
-}
-
-.leftSide{
-	display: flex;
+button:hover{
+	cursor: pointer;
 }

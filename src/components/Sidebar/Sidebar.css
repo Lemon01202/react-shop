@@ -89,3 +89,34 @@
 	width: 80%;
 	margin: 0 auto;
   }
+
+
+  .sortingButton {
+	display: inline-block;
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 100px;
+
+	line-height: 2em;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	color: rgb(0,0,0);
+	outline: none;
+	border: 1px solid rgba(0,0,0,.4);
+	border-top-color: rgba(0,0,0,.3);
+	background: linear-gradient(90deg, rgb(152, 207, 195), rgb(86, 181, 184));
+	box-shadow:
+	 0 0 3px rgba(0,0,0,0) inset,
+	 0 1px 1px 1px rgba(255,255,255,.2),
+	 0 -1px 1px 1px rgba(0,0,0,0);
+	transition: .5s;
+  }
+  .sortingButton:hover:not(:active) {
+	box-shadow:
+	 0 1px 1px 1px rgba(0,255,255,.5),
+	 0 -1px 1px 1px rgba(0,255,255,.5);
+	 transition: .5s ease-in-out;
+
+  }

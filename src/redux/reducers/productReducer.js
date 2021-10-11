@@ -1,4 +1,5 @@
 import { ActionTypes } from "../constans/action-types";
+import { SidebarTypes } from "../constans/sidebar-types";
 
 const initialState = {
 	product: [],
@@ -22,6 +23,15 @@ const productReducer = (state = initialState, action) => {
 			return {
 				...state,
 				isLoading: action.payload
+			}
+		case SidebarTypes.GET_PRICE_RANGE:
+			return {
+				...state,
+				product: state.product.map(p => {
+					if (p.price >= action.payload[0] && p.price <= action.payload[1]) {
+						return { ...p }
+					}
+				})
 			}
 		default:
 			return state

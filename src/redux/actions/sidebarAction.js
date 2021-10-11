@@ -27,3 +27,10 @@ export const setPriceRange = (priceRange) => {
 		payload: priceRange
 	}
 }
+
+export const getPriceRange = (priceRange) => {
+	return {
+		type: SidebarTypes.GET_PRICE_RANGE,
+		payload: priceRange
+	}
+}

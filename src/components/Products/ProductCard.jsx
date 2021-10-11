@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { setProducts } from '../../redux/actions/productAction'
-import { setPriceRange } from '../../redux/actions/sidebarAction'
+import { setMaxPrice, setMinPrice, setPriceRange } from '../../redux/actions/sidebarAction'
 
 const ProductCard = () => {
 	const { product } = useSelector(state => state.products)
@@ -39,6 +39,8 @@ const ProductCard = () => {
 			console.log(prices);
 			dispatch(setProducts(response.data));
 			dispatch(setPriceRange([findMaxMin(prices, 'min'), findMaxMin(prices, 'max')]))
+			dispatch(setMinPrice(findMaxMin(prices, 'min')))
+			dispatch(setMaxPrice(findMaxMin(prices, 'max')))
 		}
 		catch {
 			console.log('Error');
@@ -53,7 +55,7 @@ const ProductCard = () => {
 	return (
 		<div className='productCards'>
 			{product.map((p, index) => (
-				<section key={p.id} className="row">
+				<section key={index} className="row">
 					<div className="container-item">
 						<div className="item">
 							<img className='itemImage' src={p.image} />

@@ -1,12 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import Carousel_ from '../Carousel/Carousel';
 import Sidebar from '../Sidebar/Sidebar';
+import Trends from '../Trends/Trends';
 import ProductComponent from './ProductComponent';
 
 const ProductsListing = () => {
-	const { product } = useSelector(state => state.products)
 	return (
 		<div className='productContent'>
+			<Trends />
+			<Carousel_ />
 			<Sidebar />
 			<ProductComponent />
 		</div>

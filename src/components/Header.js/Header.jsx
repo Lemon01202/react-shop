@@ -3,16 +3,14 @@ import { NavLink } from 'react-router-dom'
 import './Header.css'
 const Header = () => {
 	return (
-		<div className='header'>
-			<div className='leftSide'>
-				<NavLink to='/' className=''><img className='headerLogo' src='https://upload.wikimedia.org/wikipedia/en/9/92/Stop%26Shop2008.png' /></NavLink>
-				<div className='headerTitle'>
-					<div className='shopName'>Stop&Shop</div>
-					<div className='shopNameSubtitle'>
-						only branded items and accessories</div>
-				</div>
+		<header>
+			<div class="overlay">
+				<h1>Shop&Show</h1>
+				<h3>Best Items and assocciries</h3>
+				<button>READ MORE</button>
 			</div>
-		</div>
+		</header>
+
 	)
 }
 
