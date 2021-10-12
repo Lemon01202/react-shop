@@ -77,8 +77,6 @@ const ProductCard = () => {
 										</div>
 										<div className="item-product-price">
 											<span className="price-num">{p.price}$</span>
-											{/* <p clasclassName="subdescription">$36</p> */}
-											{/* <div className="old-price"></div> */}
 										</div>
 									</div>
 								</div>

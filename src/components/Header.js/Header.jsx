@@ -6,7 +6,7 @@ const Header = () => {
 		<header>
 			<div class="overlay">
 				<h1>Shop&Show</h1>
-				<h3>Best Items and assocciries</h3>
+				<h3>Best Items and Accessories</h3>
 				<button>READ MORE</button>
 			</div>
 		</header>

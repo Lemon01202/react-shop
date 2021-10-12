@@ -1,0 +1,27 @@
+.salesInfo{
+	height: 50vh;
+	text-align: center;
+	background-image: url('https://storage1.censor.net/images/b/5/8/3/b583c10553e1be2b16aa43dc5dec829c/original.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+.titleWrapper{
+	position: relative;
+	top: 30%;
+	color: white;
+}
+
+.salesInfoTitle{
+	font-size: 54px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.salesInfoSubtitle{
+	font-size: 40px;
+	font-weight: 500;
+	/* text-transform: uppercase; */
+}

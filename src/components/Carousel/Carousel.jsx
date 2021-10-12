@@ -29,11 +29,22 @@ function Carousel_() {
 				<Carousel.Item interval={4000}>
 					<img
 						className="d-block w-100"
-						src="https://cdn.pixabay.com/photo/2017/08/10/11/19/fashion-2621564_1280.jpg"
+						src="https://stylecaster.com/wp-content/uploads/2021/06/bella-1.jpg"
 						alt="Third slide"
 					/>
 					<Carousel.Caption>
 						<h3>Third slide label</h3>
+						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					</Carousel.Caption>
+				</Carousel.Item>
+				<Carousel.Item interval={4000}>
+					<img
+						className="d-block w-100"
+						src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bella-hadid-street-style-1539096212.jpg"
+						alt="Third slide"
+					/>
+					<Carousel.Caption>
+						<h3>Fourh slide label</h3>
 						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
 					</Carousel.Caption>
 				</Carousel.Item>

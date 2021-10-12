@@ -12,10 +12,10 @@
 
 .productCards{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	text-align: center;
-	position: relative;
-	left: 150px;
+	/* position: relative; */
+	/* left: 150px; */
 }
 
 .productCard{
