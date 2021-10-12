@@ -4,6 +4,7 @@ const ProductComponent = () => {
 
 	return (
 		<div className='productList'>
+			<div className='productTitle'>Featured Products</div>
 			<ProductCard />
 		</div>
 	)
