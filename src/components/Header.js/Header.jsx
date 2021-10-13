@@ -7,7 +7,7 @@ const Header = () => {
 			<div class="overlay">
 				<h1>Shop&Show</h1>
 				<h3>Best Items and Accessories</h3>
-				<form action="page/new.html" target="_blank">
+				<form action="/">
 					<button>READ MORE</button>
 				</form>
 			</div>

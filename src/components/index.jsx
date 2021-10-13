@@ -11,7 +11,6 @@ const ProductsListing = () => {
 		<div className='productContent'>
 			<Trends />
 			<Carousel_ />
-			{/* <Sidebar /> */}
 			<ProductComponent />
 			<SalesInfo />
 			<Partners />

@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
+import Loader from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router'
-import { setCurrentProduct, setIsLoading } from '../../redux/actions/productAction';
+import { setCurrentProduct, setIsLoading, setIsLoadingCurrentProduct } from '../../redux/actions/productAction';
 import './CurrentCard.css'
 const ProductDetail = () => {
 	const { id } = useParams();
@@ -13,15 +14,22 @@ const ProductDetail = () => {
 	const { rate, count } = rating ? rating : 0;
 	const setProduct = async (id) => {
 		dispatch(setIsLoading(true))
+		dispatch(setIsLoadingCurrentProduct(true))
 		const response = await axios.get(`https://fakestoreapi.com/products/${id}`).catch(console.log('ERROR WHILE GETTING CURRENT USER'))
+		dispatch(setIsLoadingCurrentProduct(false))
 		dispatch(setIsLoading(false))
 		dispatch(setCurrentProduct(response.data))
 	}
-	
+
 	useEffect(() => {
 		setProduct(id);
 	}, [])
-	if (isLoading) return (<div>Loading...</div>)
+	if (isLoading) return (
+		<Loader type="ThreeDots"
+			color="#00BFFF"
+			height={100}
+			width={100} />
+	)
 	return (
 		<div className='currentProduct'>
 			<div className='currentProductCard'>

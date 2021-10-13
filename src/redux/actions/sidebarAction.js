@@ -34,3 +34,11 @@ export const getPriceRange = (priceRange) => {
 		payload: priceRange
 	}
 }
+
+export const setChoosenCategory = (category) => {
+	return {
+		type: SidebarTypes.SET_CHOOSEN_CATEGORY,
+		payload: category
+	}
+}
+

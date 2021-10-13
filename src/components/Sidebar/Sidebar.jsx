@@ -5,10 +5,16 @@ import SortBy from './SortBy'
 import SortByPrice from './SortByPrice'
 const Sidebar = () => {
 	return (
-		<div className='sideBar'>
-			<SortBy />
-			<Categories />
-			<SortByPrice />
+		<div className='container'>
+			<div className='sidebarSubtitle'>SORTING PARAMS:</div>
+			<div className='row'>
+				<div className='col-sm-12 col-xl-6'>
+					<Categories />
+				</div>
+				<div className='col-sm-12 col-xl-6'>
+					<SortByPrice />
+				</div>
+			</div>
 		</div>
 	)
 }

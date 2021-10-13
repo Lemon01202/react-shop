@@ -7,13 +7,13 @@ import 'animate.css';
 const Trends = () => {
 	const { product } = useSelector(state => state.products)
 	return (
-		<div className='trends'>
+		<div className='container trends'>
 			<div className='trendTitle'>Main Trends</div>
-			<div className='trendsContent'>
-				<div className='trendsCard animate__animated fadeInDown'><TrendsCard idProduct={product[1]} /></div>
-				<div className='trendsCard animate__animated fadeInUp'><TrendsCard idProduct={product[3]} /></div>
-				<div className='trendsCard animate__animated fadeInDown'><TrendsCard idProduct={product[19]} /></div>
-				<div className='trendsCard animate__animated fadeInUp'><TrendsCard idProduct={product[18]} /></div>
+			<div className='row'>
+				<div className='trendsCard col-sm-6 col-md-6 col-lg-3'><TrendsCard idProduct={product[1]} /></div>
+				<div className='trendsCard col-sm-6 col-md-6 col-lg-3'><TrendsCard idProduct={product[3]} /></div>
+				<div className='trendsCard col-sm-6 col-md-6 col-lg-3'><TrendsCard idProduct={product[19]} /></div>
+				<div className='trendsCard col-sm-6 col-md-6 col-lg-3'><TrendsCard idProduct={product[18]} /></div>
 			</div>
 		</div>
 	)

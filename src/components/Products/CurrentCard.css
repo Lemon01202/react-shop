@@ -1,6 +1,6 @@
 .currentProduct{
 	height: 100vh;
-
+	padding-bottom: 50px;
 }
 
 .currentProductCard{
@@ -50,6 +50,8 @@
 	overflow: hidden;
 }
 
+
+
 .productCount{
 	float: right;
 	margin: 10px 10px 20px 10px;
@@ -61,4 +63,18 @@
 	font-weight: 500;
 	font-size: 20px;
 	margin-bottom: 20px;
+}
+
+.row{
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.productCards{
+	margin: 0 auto;
+}
+
+.loadingDetails{
+	height: 800px;
+
 }

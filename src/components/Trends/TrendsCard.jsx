@@ -1,9 +1,15 @@
 import React from 'react'
+import Loader from 'react-loader-spinner';
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 const TrendsCard = ({ idProduct }) => {
-	if (!idProduct) return <div>Loading...</div>;
+	if (!idProduct) return (
+		<Loader type="ThreeDots"
+			color="#00BFFF"
+			height={100}
+			width={100} />
+	);
 	return (
 		<section className="row">
 			<div className="container-item">

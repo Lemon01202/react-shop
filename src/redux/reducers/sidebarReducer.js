@@ -3,6 +3,7 @@ import { SidebarTypes } from '../constans/sidebar-types';
 
 const initialState = {
 	categories: [],
+	choosenCategory: '',
 	priceRange: [],
 	maxPrice: 0,
 	minPrice: 0,
@@ -11,7 +12,6 @@ const initialState = {
 }
 
 const sidebarReducer = (state = initialState, action) => {
-	// debugger;
 	switch (action.type) {
 		case SidebarTypes.SET_CATEGORIES:
 			return {
@@ -19,7 +19,6 @@ const sidebarReducer = (state = initialState, action) => {
 				categories: action.payload
 			}
 		case SidebarTypes.SET_MAX_PRICE:
-			// debugger;
 			return {
 				...state,
 				staticMaxPrice: action.payload
@@ -33,7 +32,11 @@ const sidebarReducer = (state = initialState, action) => {
 			return {
 				...state,
 				priceRange: action.payload,
-
+			}
+		case SidebarTypes.SET_CHOOSEN_CATEGORY:
+			return {
+				...state,
+				choosenCategory: action.payload,
 			}
 
 		default:

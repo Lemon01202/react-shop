@@ -1,5 +1,5 @@
 .salesInfo{
-	height: 50vh;
+	min-height: 50vh;
 	text-align: center;
 	background-image: url('https://storage1.censor.net/images/b/5/8/3/b583c10553e1be2b16aa43dc5dec829c/original.jpg');
 	background-size: cover;
@@ -9,8 +9,7 @@
 }
 
 .titleWrapper{
-	position: relative;
-	top: 30%;
+	padding-top: 70px;
 	color: white;
 }
 

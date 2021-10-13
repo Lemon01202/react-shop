@@ -28,9 +28,7 @@ const SortByPrice = () => {
 		<div>
 			<div className='sliderBar'>
 				<Slider value={priceRange} onChange={onRangeChange} valueLabelDisplay={'auto'} min={staticMinPrice} max={staticMaxPrice} />
-				<div>От {priceRange[0]} до {priceRange[1]}</div>
 				<div href="" className="sortingButton" onClick={getProductOnRangePrice}>Sorting by price</div>
-
 			</div>
 		</div>
 	)
